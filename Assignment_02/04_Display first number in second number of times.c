@@ -1,0 +1,41 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Problem Statement : Accept two numbers from user and Display first number in second number of times
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+void Display(int iNo,int frequency)
+{
+    int i = 0;
+
+    if(frequency < 0)
+    {
+        frequency = -frequency;
+    }
+
+    for(i = 1; i <= frequency; i++)
+    {
+        printf("%d\t",iNo);
+    }
+}
+
+int main()
+{
+    int iValue = 0;
+    int iCount = 0;
+
+    printf("Enter number");
+    scanf("%d",&iValue);
+
+    printf("Enter frequency");
+    scanf("%d",&iCount);
+
+    Display(iValue,iCount);
+
+    return 0;
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+//  Result 
+//  Input :     12 5
+//  Output:     12  12  12  12  12
+/////////////////////////////////////////////////////////////////////////////////////////
