@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Problem Statement : Write a program which accept number from and display factors in decresing order
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+void RevFact(int iNo)
+{
+    int iCnt = 0;
+
+    if(iNo < 0)      // Updater
+    {
+        iNo = -iNo;
+    }
+    for(iCnt = (iNo/2); iCnt >= 1;  iCnt--)
+    {
+        if((iNo % iCnt) == 0)
+        {
+           printf("%d\t",iCnt);
+        }
+    }
+}
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter nmber\n ");
+    scanf("%d",&iValue);
+
+    RevFact(iValue);
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//  Result
+//  Input :     12
+//  Output :    6   5   3   2   1
+//////////////////////////////////////////////////////////////////////////////
